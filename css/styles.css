@@ -1,1 +1,41 @@
 @import "reset.css";
+* {
+    box-sizing: border-box;
+}
+
+body {
+    --secondary-color-light: #41996f;
+    --secondary-color-dark: #36805d;
+    --primary-color-light: white;
+    font-family: sans-serif;
+}
+
+.nav-list {
+    font-size: 0px;
+}
+
+.nav-list-item {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.nav-link {
+    display: block;
+    padding: 20px;
+    min-width: 200px;
+    max-width: 200px;
+    border: 1px solid var(--secondary-color-dark);
+    background-color: var(--secondary-color-light);
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--primary-color-light);
+}
+
+.nav-link:hover, .nav-link:focus {
+    background-color: var(--secondary-color-dark);
+    color: inherit;
+    outline: none;
+}
