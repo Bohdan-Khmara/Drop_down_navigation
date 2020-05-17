@@ -18,6 +18,8 @@ body {
     display: inline-block;
     text-align: center;
     font-size: 1.2rem;
+    position: relative;
+    background-color: var(--secondary-color-light);
 }
 
 .nav-link {
@@ -26,16 +28,25 @@ body {
     min-width: 200px;
     max-width: 200px;
     border: 1px solid var(--secondary-color-dark);
-    background-color: var(--secondary-color-light);
     text-decoration: none;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     color: var(--primary-color-light);
+
 }
 
-.nav-link:hover, .nav-link:focus {
+.nav-list-item:hover, .nav-link:focus {
     background-color: var(--secondary-color-dark);
-    color: inherit;
+    color: var(--primary-color-light);
     outline: none;
+}
+
+.nav-sub-list {
+    position: absolute;
+    display: none;
+}
+
+.nav-list-item:hover > .nav-sub-list {
+    display: block;
 }
